@@ -1,0 +1,1 @@
+export const BACKEND_URL = " https://backend.man-kng02.workers.dev"
