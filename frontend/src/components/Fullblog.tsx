@@ -1,6 +1,6 @@
 import { Blog } from "../hooks"
 import { Appbar } from "./Appbar"
-import { Avatar } from "./BlogCard"
+import { Avatar } from "./Avatar"
 
 export const FullBlog = ({ blog }: {blog: Blog}) => {
     return <div>
@@ -12,7 +12,7 @@ export const FullBlog = ({ blog }: {blog: Blog}) => {
                         {blog.title}
                     </div>
                     <div className="text-slate-500 pt-2">
-                        {blog.publishedDate}
+                        {blog.publishedDate} 
                     </div>
                     <div className="pt-4">
                         {blog.content}
@@ -24,7 +24,7 @@ export const FullBlog = ({ blog }: {blog: Blog}) => {
                     </div>
                     <div className="flex w-full">
                         <div className="pr-4 flex flex-col justify-center">
-                            <Avatar size="big" name={blog.author.name || "Anonymous"} />
+                            <Avatar size="medium" name={blog.author.name || "Anonymous"} />
                         </div>
                         <div>
                             <div className="text-xl font-bold">
