@@ -36,7 +36,6 @@ export const FullBlog = ({ blog }: {blog: Blog}) => {
                         </div>
                     </div>  
                 </div>
-                
             </div>
         </div>
     </div>

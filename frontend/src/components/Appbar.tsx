@@ -53,7 +53,7 @@ export const Appbar = ({ skipAuthCheck = false }: AppbarProps) => {
                         to="/signup"
                         className="focus:outline-none whitespace-nowrap text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-3xl text-m px-5 py-2.5"
                     >
-                        Get started 
+                        Get started
                     </Link>
                 </div>
             )}

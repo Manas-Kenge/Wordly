@@ -14,7 +14,6 @@ export const Profile = () => {
     const [show, setShow] = useState(false);
     // const { currentUser } = useUser(user.id);
 
-
     const logout = () => {
         localStorage.clear();
         navigate('/');
@@ -24,11 +23,11 @@ export const Profile = () => {
     //     navigate('/bookmarks');
     // };
 
-    // const goToProfile = () => {
-    //     if (user && user.id) {
-    //         navigate(`/profile/${user.id}`);
-    //     }
-    // };
+    const goToProfile = () => {
+        if (user && user.id) {
+            navigate(`/profile/${user.id}`);
+        }
+    };
 
     const handleClickAway = () => {
         setShow(false);
@@ -46,13 +45,13 @@ export const Profile = () => {
                     className="absolute -bottom-32 -left-28 shadow-lg bg-main border rounded-md border-gray-100 z-50 w-[160px]"
                 >
                     <div className="flex flex-col">
+                        <div className="px-4 py-2 hover:bg-sub" onClick={goToProfile}>
+                            Profile
+                        </div>
                         <div className="px-4 py-2 hover:bg-sub" onClick={logout}>
                             Logout
                         </div>
-                        {/* <div className="px-4 py-2 hover:bg-sub" onClick={goToProfile}>
-                            Profile
-                        </div>
-                        <div className="px-4 py-2 hover:bg-sub" onClick={goToBookmarks}>
+                        {/* <div className="px-4 py-2 hover:bg-sub" onClick={goToBookmarks}>
                             Bookmarks
                         </div> */}
                     </div>
