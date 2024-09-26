@@ -19,7 +19,7 @@ export const useUserBlogs = (userId: string) => {
                     Authorization: localStorage.getItem("token")
                 },
             });
-            setBlogs(response.data.posts);
+            setBlogs(response.data.blogs);
             setLoading(false);
         }
         fetchBlogs();

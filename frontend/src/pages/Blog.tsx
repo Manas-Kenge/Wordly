@@ -2,7 +2,7 @@ import { Appbar } from "../components/Appbar";
 import { FullBlog } from "../components/Fullblog";
 import { Spinner } from "../components/Spinner";
 import { useBlog } from "../hooks";
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // atomFamilies/selectorFamilies
 export const Blog = () => {
@@ -16,7 +16,6 @@ export const Blog = () => {
             <Appbar />
             
             <div className="h-screen flex flex-col justify-center">
-                
                 <div className="flex justify-center">
                     <Spinner />
                 </div>

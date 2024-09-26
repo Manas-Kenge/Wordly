@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { formatDateString, getPlainTextFromHTML } from '../util/string';
 import { Avatar } from "./Avatar";
 
 interface BlogCardProps {
@@ -14,7 +15,7 @@ export const BlogCard = ({
     authorName,
     title,
     content,
-    publishedDate = new Date().toDateString()
+    publishedDate
 }: BlogCardProps) => {
     
     return <Link to={`/blog/${id}`}>
@@ -26,14 +27,14 @@ export const BlogCard = ({
                     <Circle />
                 </div>
                 <div className="pl-2 font-thin text-slate-500 text-sm flex justify-center flex-col">
-                    {publishedDate}
+                    {formatDateString(publishedDate)}
                 </div>
             </div>
             <div className="text-xl font-semibold pt-2">
                 {title}
             </div>
             <div className="text-md font-thin">
-                {content.slice(0, 100) + "..."}
+                {getPlainTextFromHTML(content.slice(0, 100) + "...")}
             </div>
             <div className="text-slate-500 text-sm font-thin pt-4">
                 {`${Math.ceil(content.length / 100)} minute(s) read`}
@@ -44,6 +45,5 @@ export const BlogCard = ({
 
 export function Circle() {
     return <div className="h-1 w-1 rounded-full bg-slate-500">
-        
     </div>
 }

@@ -21,9 +21,6 @@ export const Appbar = ({ skipAuthCheck = false }: AppbarProps) => {
             <Link to={'/blogs'} className="flex items-center justify-center cursor-pointer font-bold text-xl">
                 {bookIcon()}
                 <span className="ml-2">Medium</span>
-                {/* <Link to={'/'} className="flex flex-col justify-center cursor-pointer">
-                Medium
-            </Link> */}
             </Link>
             <div>
                 <Search />
@@ -36,14 +33,7 @@ export const Appbar = ({ skipAuthCheck = false }: AppbarProps) => {
                         <Button size="lg" className="bg-green-700 hover:bg-green-800 p-4">
                             {writeIcon()}<span>Write</span>
                         </Button>
-                        {/* <button
-                            type="button"
-                            className="flex items-center text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-4 py-2 text-center mb-2 space-x-2"
-                        >
-                            {writeIcon()}<span>Write</span>
-                        </button> */}
                     </Link>
-                    {/* <Avatar size={"medium"} name="e.target.name" /> */}
                     <Profile />
                 </div>
             </>)

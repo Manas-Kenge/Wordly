@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom"
 import { Appbar } from "../components/Appbar"
+import { BlogCard } from "@/components/BlogCard"
+import { useBlogs } from "../hooks";
 
 export const Home = () => {
+    const { blogs } = useBlogs();
+
     return <div>
         <Appbar skipAuthCheck />
         <div className="grid grid-cols-2 gap-8 bg-[#f4f4f1] h-screen p-8">
@@ -24,6 +28,17 @@ export const Home = () => {
                     alt="Hero Image"
                     className="w-3/4 h-auto rounded-lg"
                 />
+            </div>
+        </div>
+        <div className="flex justify-center">
+            <div>
+                {blogs.map(blog => <BlogCard
+                    id={blog.id}
+                    authorName={blog.author.username || "Anonymous"}
+                    title={blog.title}
+                    content={blog.content}
+                    publishedDate={blog.publishedDate}
+                />)}
             </div>
         </div>
     </div>
