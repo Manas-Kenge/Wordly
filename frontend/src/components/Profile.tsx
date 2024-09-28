@@ -34,7 +34,7 @@ export const Profile = () => {
 
     return <div>                                                    
         <div className="relative cursor-pointer">
-            <Avatar name={user.authorName} onClick={() => setShow(!show)} />
+            <Avatar name={user.name} onClick={() => setShow(!show)} />
             {/* imageSrc={currentUser?.profilePic} */}
             {show && (
                 <div
