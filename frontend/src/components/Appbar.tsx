@@ -1,4 +1,3 @@
-// import { Avatar } from "./Avatar";
 import { Link, useNavigate } from "react-router-dom"
 import { Search } from "./Search";
 import { Profile } from "./Profile";
@@ -20,7 +19,7 @@ export const Appbar = ({ skipAuthCheck = false }: AppbarProps) => {
         <div className="flex justify-center items-center gap-4">
             <Link to={'/blogs'} className="flex items-center justify-center cursor-pointer font-bold text-xl">
                 {bookIcon()}
-                <span className="ml-2">Medium</span>
+                <span className="ml-2">Wordly</span>
             </Link>
             <div>
                 <Search />
